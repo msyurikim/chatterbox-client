@@ -5,7 +5,8 @@ var MessagesView = {
   initialize: function() {
   },
 
-  render: function() {
+  render: function(message) {
+    MessageView.render(message); //i did this
   }
 
 };
