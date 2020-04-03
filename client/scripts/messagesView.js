@@ -5,8 +5,10 @@ var MessagesView = {
   initialize: function() {
   },
 
-  render: function(message) {
-    MessageView.render(message); //i did this
+  //originally render: function
+  renderMessage: function(message) {
+    let newMessage = MessageView.render(message); //i did this
+    $('#chats').append(newMessage);
   }
 
 };
