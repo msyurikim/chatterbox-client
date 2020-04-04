@@ -1,8 +1,7 @@
 var MessagesView = {
 
   $chats: $('#chats'),
-  //$submit: $('.submit');
-  $message: $('#message'),
+  //$message: $('#message'),
 
   initialize: function() {
 
