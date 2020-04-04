@@ -15,9 +15,7 @@ var FormView = {
     //var inputs = document.getElementbyId("send").elements;
     var data = document.getElementById("send").elements;
     var msg = Messages.convertHTML(data["message"].value);
-    //var msg = JSON.parse(data["message"].value);
     var user = Messages.convertHTML(App.username);
-    //var user = JSON.parse(App.username);
     console.log(msg);
     console.log(user);
     //var newMessage = FormView.$message;
