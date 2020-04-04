@@ -17,10 +17,12 @@ var FormView = {
     var msg = Messages.convertHTML(data["message"].value);
     //var msg = JSON.parse(data["message"].value);
     var user = Messages.convertHTML(App.username);
+    var room =
     //var room = Messages.convertHTML(data.)
     //var user = JSON.parse(App.username);
     console.log(msg);
     console.log(user);
+    console.log(data);
     //var newMessage = FormView.$message;
     var newMessage = {
       username: user,

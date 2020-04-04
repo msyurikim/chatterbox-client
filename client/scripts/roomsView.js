@@ -4,22 +4,18 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
-    Parse.readAll(function(data) {
-      console.log(data);
-      var rooms = [];
-      data.results.forEach(function(datum) {
-        if (datum.roomname && !rooms.includes(datum.roomname)) {
-          //move this to renderRooms function
-          //pass in rooms = [], along with datum
-          rooms.push(datum.roomname);
-          let newRoom = RoomsView.render(datum);
-          RoomsView.$select.append(newRoom);
-        }
-      });
-    });
+    RoomsView.$button.on('click', Rooms.handleClick);
   },
 
-  //renderRooms: func
+  renderRooms: function(datum, rooms = []) {
+    if (datum.roomname && !rooms.includes(datum.roomname)) {
+      //move this to renderRooms function
+      //pass in rooms = [], along with datum
+      rooms.push(datum.roomname);
+      let newRoom = RoomsView.render(datum);
+      RoomsView.$select.append(newRoom);
+    }
+  },
 
   //originally empty render
   render: _.template(`

@@ -20,9 +20,11 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
+      let rooms = [];
       for (var i = 0; i < data['results'].length; i++) {
         MessagesView.renderMessage(data['results'][i]);
         //render rooms here
+        RoomsView.renderRooms(data.results[i], rooms);
       }
       callback();
     });
