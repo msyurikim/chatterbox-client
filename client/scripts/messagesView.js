@@ -14,7 +14,9 @@ var MessagesView = {
       message.username = Messages.convertHTML(message.username);
       message.roomname = Messages.convertHTML(message.roomname);
       let newMessage = MessageView.render(message);
-      $('#chats').append(newMessage);
+      if ($("#rooms select").val() === message.roomname) {
+        $('#chats').append(newMessage);
+      }
     }
     //$chats.append(newMessage);
   }

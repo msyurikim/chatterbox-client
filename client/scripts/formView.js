@@ -17,7 +17,7 @@ var FormView = {
     var msg = Messages.convertHTML(data["message"].value);
     //var msg = JSON.parse(data["message"].value);
     var user = Messages.convertHTML(App.username);
-    var room =
+    var room = Messages.convertHTML($("#rooms select").val());
     //var room = Messages.convertHTML(data.)
     //var user = JSON.parse(App.username);
     console.log(msg);
@@ -27,7 +27,7 @@ var FormView = {
     var newMessage = {
       username: user,
       text: msg,
-      roomname: 'something'
+      roomname: room
     };
     Parse.create(newMessage);
     Messages.update();
