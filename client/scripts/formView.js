@@ -15,7 +15,6 @@ var FormView = {
     //var inputs = document.getElementbyId("send").elements;
     var data = document.getElementById("send").elements;
     var msg = Messages.convertHTML(data["message"].value);
-    //var msg = JSON.parse(data["message"].value);
     var user = Messages.convertHTML(App.username);
     var room = Messages.convertHTML($("#rooms select").val());
     //var room = Messages.convertHTML(data.)

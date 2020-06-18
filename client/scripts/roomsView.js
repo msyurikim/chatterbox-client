@@ -17,9 +17,16 @@ var RoomsView = {
     }
   },
 
-  //originally empty render
   render: _.template(`
-    <option><%= roomname%></option>
-  `)
+    <div class="#rooms select">
+      <div class="roomname">
+      </div>
+    </div>
+  `),
+
+  renderRoom: function(roomname) {
+    let newRoom = RoomsView.render(roomname);
+    $('#rooms select').append(newRoom);
+  }
 
 };

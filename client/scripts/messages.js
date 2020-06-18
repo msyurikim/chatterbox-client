@@ -3,7 +3,7 @@ var Messages = {
 
   convertHTML: function(input) {
     var chars = input.split('');
-    var newChars = [];
+    //var newChars =
     chars.forEach(function(char) {
       //Convert & to &amp;, Convert < to &lt;, Convert > to &gt;, Convert " to &quot;, Convert ' to &#x27;, Convert / to &#x2F;
       if (char === '&') {
@@ -19,9 +19,8 @@ var Messages = {
       } else if (char === '/') {
         char = '&#x2F;';
       }
-      newChars.push(char);
     });
-    return newChars.join('');
+    return chars.join('');
   },
 
   update: function() {
